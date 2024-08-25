@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+<style>
+    div#result {
+        display: none;
+    }
+
+    div#container {
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 10px #ccc;
+    padding: 30px 20px;
+    background: #e8bab6;
+    
+}
+div#bottom-div button {
+    display: block;
+    margin-bottom: 10px;
+    background: #fff;
+    border: transparent;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px;
+}
+div#bottom-div button:hover {
+    background: #f4dad8;
+    cursor: pointer;
+}
+
+button.next-btn {
+    background: #ba7f7b;
+    color: #fff;
+    border: transparent;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+</style>
+<body>
+
+
+    <div id="main">
+        <div id="container">
+            <div id="top-div">
+                <h3>Simple Quiz</h3>
+                <h3>Question <span id="currentquestionnumber"></span> / <span id="totalquestionnumber"></span></h3>
+            </div>
+            <div id="main-div">
+                <h1 id="question"></h1>
+            </div>
+            <div id="bottom-div"></div>
+            <button onclick="optbtn()" class="next-btn">Next</button>
+        </div>
+    </div>
+
+    <div id="result">
+        <h3>Correct answer is <span id="markvalue"></span> </h3>
+    </div>
+
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
