@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <style>
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .light {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button id="mode">Change Mode</button>
+    
+    <p>This is my Paragraph</p>
+
+
+
+    <script>
+        let myMode = document.getElementById("mode");
+        let currMode = "light";
+        let myBody = document.querySelector("body");
+        
+        myMode.addEventListener("click", () => {
+            if (currMode === "light") {
+                currMode = "dark";
+                myBody.classList.add("dark");
+                myBody.classList.remove("light");
+            }
+
+            else {
+                currMode = "light";
+                myBody.classList.add("light");
+                myBody.classList.remove("dark");
+            }
+
+            // console.log(currMode);
+            
+        })
+
+    </script>
+</body>
+</html>
